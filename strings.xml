@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header datatype="winres" segtype="sentence" adminlang="en-us" srclang="en-us" o-tmf="abc" />
+	<body>
+		<!-- ACL -->
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.acl.create_scheme'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Can create a new rotation scheme</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.acl.update_scheme'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Can update a rotation scheme</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.acl.update_themselves'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Can add/remove themselves in a rotation scheme</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.acl.delete_scheme'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Can delete a rotation scheme</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.acl.export_schemes'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Can export rotation schemes list to CSV/XML</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.acl.view_logs'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Can view logs</seg></tuv>
+	    </tu>
+		
+		<!-- Errors -->
+		<tu tuid='net.pixelinstrument.rotation_manager.error.cant_update_rotation_scheme'>
+			<tuv xml:lang="en_US"><seg>You are not allowed to update rotation schemes</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.error.missing_group_id'>
+			<tuv xml:lang="en_US"><seg>You must associate the scheme to a group</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.error.missing_name'>
+			<tuv xml:lang="en_US"><seg>You must enter a name for the rotation scheme</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.error.missing_close_days'>
+			<tuv xml:lang="en_US"><seg>You must enter the no of days before closing tickets</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.error.missing_alert_days'>
+			<tuv xml:lang="en_US"><seg>You must enter the no of days before the alert is sent</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.error.days_not_number'>
+			<tuv xml:lang="en_US"><seg>The number of days should be a number greater than zero</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.error.alert_days_less'>
+			<tuv xml:lang="en_US"><seg>The alert days must be less than close days</seg></tuv>
+	    </tu>
+		
+		
+		<!-- Strings -->
+		
+		<tu tuid='net.pixelinstrument.rotation_manager'>
+			<tuv xml:lang="en_US"><seg>rotation manager</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.rotation_schemes'>
+			<tuv xml:lang="en_US"><seg>rotation schemes</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.rotation_log'>
+			<tuv xml:lang="en_US"><seg>rotation log</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.new_rotation_scheme'>
+			<tuv xml:lang="en_US"><seg>new scheme</seg></tuv>
+	    </tu>
+		 
+		<tu tuid='net.pixelinstrument.rotation_manager.name'>
+			<tuv xml:lang="en_US"><seg>name</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.group'>
+			<tuv xml:lang="en_US"><seg>group</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.date'>
+			<tuv xml:lang="en_US"><seg>date</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.reason'>
+			<tuv xml:lang="en_US"><seg>reason</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.scheme'>
+			<tuv xml:lang="en_US"><seg>rotation scheme</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.close_days'>
+			<tuv xml:lang="en_US"><seg>close after days</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.alert_days'>
+			<tuv xml:lang="en_US"><seg>alert after days</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.ticket'>
+			<tuv xml:lang="en_US"><seg>ticket</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.assigned_to'>
+			<tuv xml:lang="en_US"><seg>assigned to</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.active'>
+			<tuv xml:lang="en_US"><seg>active</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.select_group'>
+			<tuv xml:lang="en_US"><seg>select group</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.rotation_scheme.confirm_delete'>
+			<tuv xml:lang="en_US"><seg>Are you sure you want to permanent delete the rotation scheme?</seg></tuv>
+	    </tu>
+		
+		
+		<!-- generic cron info messages -->
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.begin_group'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Begin working on group %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.end_group'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] End working on group %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.start_email_for_group'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Begin creation of email for %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.end_email_for_group'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] End creation of email for %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.sending_mail_to'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Sending mail to %s.</seg></tuv>
+	    </tu>
+		
+		
+		<!-- generic cron warning messages -->
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.warn.no_scheme_in_group'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] WARNING: no active schemes in %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.warn.no_managers_or_workers_in_scheme'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] WARNING: no managers or workers associated to scheme %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.warn.no_workers_in_scheme'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] WARNING: no workers associated to scheme %s.</seg></tuv>
+	    </tu>
+		
+		
+		<!-- closer cron info messages -->
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.begin'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] --- BEGIN ROTATION MANAGER CLOSER ---</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.end'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] --- END ROTATION MANAGER CLOSER ---</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.looking_for_tickets_to_close'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Looking for tickets to close in %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.tickets_to_be_closed'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Tickets to be closed: %d</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.looking_for_tickets_to_alert'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Looking for tickets to add to the alert email</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.tickets_in_alert'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Tickets to add to alert email: %d</seg></tuv>
+	    </tu>
+		
+		
+		<!-- assignment cron info messages -->
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.assignment.begin'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] --- BEGIN ROTATION MANAGER ASSIGNMENT ---</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.assignment.end'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] --- END ROTATION MANAGER ASSIGNMENT ---</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.assignment.looking_for_tickets_to_assign'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Looking for tickets to be assigned in %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.tickets_to_be_assigned'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Tickets to be assigned: %d</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.assignment.ticket_assigned_to_reason'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Ticket #%s assigned to %s (%s)</seg></tuv>
+	    </tu>
+		
+		
+		<!-- report cron info messages -->
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.report.begin'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] --- BEGIN ROTATION MANAGER REPORT ---</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.report.end'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] --- END ROTATION MANAGER REPORT ---</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.report.looking_to_open_tickets'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Looking for open tickets in %s.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.report.open_tickets'>
+			<tuv xml:lang="en_US"><seg>[Rotation Manager] Open tickets: %d</seg></tuv>
+		</tu>
+		
+		
+		<!-- closer cron emails -->	
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.close_email.subject'>
+			<tuv xml:lang="en_US"><seg>[%s] Rotation Manager Closer</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.close_email.body'>
+			<tuv xml:lang="en_US"><seg>These tickets have been automatically closed because they were not updated for %d days.</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.last_update'>
+			<tuv xml:lang="en_US"><seg>last update</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.alert_email.subject'>
+			<tuv xml:lang="en_US"><seg>[%s] Rotation Manager Alert</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.closer.alert_email.body'>
+			<tuv xml:lang="en_US"><seg>The tickets in this list have not been updated for %d days and they will be automatically closed if not updated for %d days.</seg></tuv>
+	    </tu>
+		
+		
+		<!-- report cron emails -->
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.report.report_email.subject'>
+			<tuv xml:lang="en_US"><seg>[%s] Rotation Manager Report</seg></tuv>
+	    </tu>
+		
+		<tu tuid='net.pixelinstrument.rotation_manager.report.report_email.body'>
+			<tuv xml:lang="en_US"><seg>These are the currently open tickets in the %s group.</seg></tuv>
+	    </tu>
+	</body>
+</tmx>
+<!-- 
+	
+-->

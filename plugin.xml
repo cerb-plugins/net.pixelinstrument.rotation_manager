@@ -1,0 +1,150 @@
+<!DOCTYPE plugin SYSTEM "../../libs/devblocks/plugin.dtd">
+<plugin>
+	<id>net.pixelinstrument.rotation_manager</id>
+	<name>[PI] Rotation Manager</name>
+	<description>Manage rotation of tickets between workers Version 1.0.0</description>
+	<author>Davide Cassenti</author>
+	<revision>1.0.0</revision>
+	<link>http://www.pixelinstrument.net</link>
+	
+	<!-- Dependencies -->
+	
+	<dependencies>
+		<require plugin_id="devblocks.core" version="2.0.0" />
+	</dependencies>
+	
+	
+	<!-- Patches -->
+	
+	<patches>
+		<patch version="1.0.0" revision="1" file="patches/1.0.0.php" />
+	</patches>
+	
+	<!-- ACL -->
+	<acl>
+		<priv id="net.pixelinstrument.rotation_manager.acl.create_scheme" label="net.pixelinstrument.rotation_manager.acl.create_scheme" />
+		<priv id="net.pixelinstrument.rotation_manager.acl.update_scheme" label="net.pixelinstrument.rotation_manager.acl.update_scheme" />
+		<priv id="net.pixelinstrument.rotation_manager.acl.update_themselves" label="net.pixelinstrument.rotation_manager.acl.update_themselves" />
+		<priv id="net.pixelinstrument.rotation_manager.acl.delete_scheme" label="net.pixelinstrument.rotation_manager.acl.delete_scheme" />
+		<priv id="net.pixelinstrument.rotation_manager.acl.export_schemes" label="net.pixelinstrument.rotation_manager.acl.export_schemes" />
+		<priv id="net.pixelinstrument.rotation_manager.acl.view_logs" label="net.pixelinstrument.rotation_manager.acl.view_logs" />
+	</acl>
+	
+	
+	<!-- Exported Classes -->
+	
+	<class_loader>
+		<file path="api/dao/rotation_scheme.php">
+			<class name="DAO_RotationScheme" />
+			<class name="Model_RotationScheme" />
+			<class name="SearchFields_RotationScheme" />
+			<class name="View_RotationScheme" />
+		</file>
+		
+		<file path="api/dao/rotation_log.php">
+			<class name="DAO_RotationLog" />
+			<class name="Model_RotationLog" />
+			<class name="SearchFields_RotationLog" />
+			<class name="View_RotationLog" />
+		</file>
+		
+		<file path="api/uri/rotation_scheme.php">
+			<class name="PiRotationSchemeTab" />
+		</file>
+		
+		<file path="api/uri/rotation_manager.php">
+			<class name="PiRotationManagerPage" />
+			<class name="Extension_RotationManagerTab" />
+		</file>
+	</class_loader>
+
+	<extensions>
+		<!-- Contexts -->
+		
+		<extension point="devblocks.context">
+			<id>net.pixelinstrument.contexts.rotation_scheme</id>
+			<name>Rotation scheme</name>
+			
+			<class>
+				<file>api/dao/rotation_scheme.php</file>
+				<name>Context_RotationScheme</name>
+			</class>
+		</extension>
+		
+		<extension point="cerberusweb.page">
+			<id>net.pixelinstrument.rotation_manager.page</id>
+			<name>Rotation Manager Page</name>
+			<class>
+				<file>api/uri/rotation_manager.php</file>
+				<name>PiRotationManagerPage</name>
+			</class>
+			<params>
+				<param key="uri" value="rotationmanager" />
+				<param key="menutitle" value="net.pixelinstrument.rotation_manager" />
+			</params>
+		</extension>
+		
+		
+		<!-- Configuration Tabs -->
+		
+		<extension point="net.pixelinstrument.rotation_manager.tab">
+			<id>net.pixelinstrument.rotation_manager.tab.rotation_scheme</id>
+			<name>Rotation Scheme Tab</name>
+			<class>
+				<file>api/uri/rotation_scheme.php</file>
+				<name>PiRotationSchemeTab</name>
+			</class>
+			<params>
+				<param key="uri" value="rotationscheme" />
+				<param key="title" value="net.pixelinstrument.rotation_manager.rotation_schemes" />
+			</params>
+		</extension>
+		
+		<extension point="net.pixelinstrument.rotation_manager.tab">
+			<id>net.pixelinstrument.rotation_manager.tab.rotation_log</id>
+			<name>Rotation Log Tab</name>
+			<class>
+				<file>api/uri/rotation_log.php</file>
+				<name>PiRotationLogTab</name>
+			</class>
+			<params>
+				<param key="uri" value="rotationscheme" />
+				<param key="title" value="net.pixelinstrument.rotation_manager.rotation_log" />
+				<param key="acl" value="net.pixelinstrument.rotation_manager.acl.view_logs" />
+			</params>
+		</extension>
+		
+		
+		<!-- Cron jobs -->
+		
+		<extension point="cerberusweb.cron">
+			<id>net.pixelinstrument.rotation_manager.cron.assignment</id>
+			<name>Rotation Manager Assignment</name>
+			<class>
+				<file>api/cron/assignment.php</file>
+				<name>PiRotationManagerAssignment</name>
+			</class>
+			<params/>
+		</extension>
+		
+		<extension point="cerberusweb.cron">
+			<id>net.pixelinstrument.rotation_manager.cron.report</id>
+			<name>Rotation Manager Report</name>
+			<class>
+				<file>api/cron/report.php</file>
+				<name>PiRotationManagerReport</name>
+			</class>
+			<params/>
+		</extension>
+		
+		<extension point="cerberusweb.cron">
+			<id>net.pixelinstrument.rotation_manager.cron.closer</id>
+			<name>Rotation Manager Closer</name>
+			<class>
+				<file>api/cron/closer.php</file>
+				<name>PiRotationManagerCloser</name>
+			</class>
+			<params/>
+		</extension>
+	</extensions>
+</plugin>
