@@ -7,7 +7,7 @@ class PiRotationLogTab extends Extension_RotationManagerTab {
 	function showTab() {
 		// Remember the tab
 		$visit = CerberusApplication::getVisit();
-		$visit->set(CerberusVisit::KEY_ACTIVITY_TAB, 'rotationlog');
+		$visit->set(Extension_RotationManagerTab::POINT, 'rotationlog');
 		
 		$tpl = DevblocksPlatform::getTemplateService();
 		

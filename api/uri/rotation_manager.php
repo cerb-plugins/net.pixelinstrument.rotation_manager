@@ -1,5 +1,7 @@
 <?php
 abstract class Extension_RotationManagerTab extends DevblocksExtension {
+    const POINT = 'net.pixelinstrument.rotation_manager.tab';
+    
 	function __construct($manifest) {
 		$this->DevblocksExtension($manifest);
 	}
@@ -31,9 +33,9 @@ class PiRotationManagerPage extends CerberusPageExtension {
 		$tpl->assign('request_path', implode('/',$response->path));
 
 		// Remember the last tab/URL
-		$visit = CerberusApplication::getVisit();
+        $visit = CerberusApplication::getVisit();
 		if(null == ($selected_tab = @$response->path[1])) {
-			$selected_tab = $visit->get(CerberusVisit::KEY_ACTIVITY_TAB, '');
+			$selected_tab = $visit->get(Extension_RotationManagerTab::POINT, '');
 		}
 		$tpl->assign('selected_tab', $selected_tab);
 

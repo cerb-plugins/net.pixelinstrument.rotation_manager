@@ -7,7 +7,7 @@ class PiRotationSchemeTab extends Extension_RotationManagerTab {
 	function showTab() {
 		// Remember the tab
 		$visit = CerberusApplication::getVisit();
-		$visit->set(CerberusVisit::KEY_ACTIVITY_TAB, 'rotationscheme');
+        $visit->set(Extension_RotationManagerTab::POINT, 'rotationscheme');
 		
 		$tpl = DevblocksPlatform::getTemplateService();
 		
